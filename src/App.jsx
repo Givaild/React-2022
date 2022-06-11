@@ -1,12 +1,15 @@
 import React from 'react'
+import { Header } from './components/Header'
 import {Post} from './Post'
 
+import "./styles.css";
 
 export function App() {
   
 
   return (
     <div>
+      <Header/>
     <Post 
       author="Givaildo de Andrade" 
       content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione voluptates sequi nam atque cumque, provident delectus. Amet fugit sint perferendis doloribus, cumque libero, quis porro, tenetur sed quisquam voluptatem dolor."
