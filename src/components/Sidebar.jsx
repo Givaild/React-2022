@@ -12,7 +12,7 @@ export function Sidebar(){
                         <img className={styles.avatar}  src="https://github.com/givaild.png"  />
 
                         <strong>Givaildo de Andrade</strong>
-                        <span>Web Desingner Intern</span>
+                        <span> Dev Front-End Intern</span>
                     </div>
 
                     <footer>
