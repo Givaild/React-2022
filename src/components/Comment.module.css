@@ -23,7 +23,7 @@
 
 .commentContent header {
     display:flex;
-    align-intens:flex-start;
+    align-items:flex-start;
     justify-content: space-between;
 
 }
