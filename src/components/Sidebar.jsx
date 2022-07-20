@@ -13,7 +13,7 @@ export function Sidebar(){
                        <Avatar  src="https://github.com/givaild.png"/>
 
                         <strong>Givaildo de Andrade</strong>
-                        <span> Dev Front-End Intern</span>
+                        <span> Dev FrontEnd Intern</span>
                     </div>
 
                     <footer>

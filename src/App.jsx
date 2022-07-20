@@ -16,14 +16,14 @@ const posts =[
     author:{
       avatarUrl: "https://github.com/givaild.png",
       name:"Givaildo de Andrade",
-      role: "Estagiário FrontEnd",
+      role: "Dev FrontEnd Intern",
     },
     content:[
        {type:'paragraph', content:'Fala galeraa 👋'},
        {type:'paragraph',content:'"Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
        {type:'link',content:'gil.design/doctorcare'}          
     ],
-    publishedAt:new Date('2022-07-20 11:00:00')
+    publishedAt:new Date('2022-07-20 15:00:00')
   },
 
   {
