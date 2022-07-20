@@ -6,6 +6,41 @@ import { Post } from "./components/Post";
 import styles from "./App.module.css";
 
 import "./global.css";
+// author: {avatar_url:"", name "", role:""}
+//publishedAt: date
+//content :""
+
+const posts =[
+  {
+    id:1,
+    author:{
+      avatarUrl: "https://github.com/givaild.png",
+      name:"Givaildo de Andrade",
+      role: "Estagiário FrontEnd",
+    },
+    content:[
+       {type:'paragraph', content:'Fala galeraa 👋'},
+       {type:'paragraph',content:'"Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+       {type:'link',content:'gil.design/doctorcare'}          
+    ],
+    publishedAt:new Date('2022-07-20 11:00:00')
+  },
+
+  {
+    id:2,
+    author:{
+      avatarUrl: "https://github.com/Diegodossantos23.png",
+      name:"Diego dos Santos",
+      role: "Software Developer",
+    },
+    content:[
+       {type:'paragraph', content:'Fala galeraa 👋'},
+       {type:'paragraph',content:'"Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+       {type:'link',content:'diego.design/doctorcare'}          
+    ],
+    publishedAt:new Date('2022-07-19 23:00:00')
+  },
+];
 
 
 export function App() {
@@ -15,12 +50,15 @@ export function App() {
       <div className={styles.wrapper}>
     <Sidebar />
       <main>
-        <Post
-          author="Givaildo de Andrade"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione voluptates sequi nam atque cumque, provident delectus. Amet fugit sint perferendis doloribus, cumque libero, quis porro, tenetur sed quisquam voluptatem dolor."
-        />
-        <Post author="Gustavo" content="Tenho 7 anos" />
-        <Post author="Henrique" content="Tenho 7 anos" />
+        {posts.map(post =>{
+          return (
+            <Post
+              author = {post.author}
+              content = {post.content}
+              publishedAt = {post.publishedAt} 
+            />
+          )
+        })}
       </main>
     </div>
     </div>
