@@ -5,7 +5,7 @@ import styles from "./Comment.module.css"
 
 export function  Comment ({content,onDeleteComment}) {
 
-    const [likeCout, setLikeCount] = useState(0);
+    const [likeCount, setLikeCount] = useState(0);
 
     function hadleDeleteComment() {
         onDeleteComment(content);
@@ -13,7 +13,9 @@ export function  Comment ({content,onDeleteComment}) {
     }
 
     function handleLikeComment() {
-        setLikeCount(likeCout + 1);
+        setLikeCount((state)=>{
+            return state + 1
+        });
     }
 
     return (
@@ -39,7 +41,7 @@ export function  Comment ({content,onDeleteComment}) {
                 <footer>
                     <button onClick={handleLikeComment}>
                         <ThumbsUp />
-                        Aplaudir <span>{likeCout}</span>
+                        Aplaudir <span>{likeCount}</span>
                     </button>
                 </footer>
 
