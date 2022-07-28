@@ -34,9 +34,17 @@ const [comments,setComments] = useState([
           setNewCommentText('');      
        
     }
-        function handleNewCommentChange() {
+    function handleNewCommentChange() {
             setNewCommentText(event.target.value)
         }
+    function deleteComment(commentToDelete) {
+        const commentsWithoutDeleteOne = comments.filter(comment => {
+            return comment !== commentToDelete;
+        })
+
+        setComments(commentsWithoutDeleteOne);
+}
+
     
     return (
         <article className={styles.post}>
@@ -86,8 +94,16 @@ const [comments,setComments] = useState([
 
 
              <div className={styles.commentList}>
+
             {comments.map(comment => {
-                return <Comment key={comment} content={comment}/>
+
+                return (
+                <Comment 
+                    key={comment} 
+                    content={comment} 
+                    onDeleteComment={deleteComment}
+                        />
+                        )
             })}
             </div>
         </article>
